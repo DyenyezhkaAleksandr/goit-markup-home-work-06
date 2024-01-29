@@ -261,38 +261,94 @@ span {
 /* main */
 .main {
 }
-/* section1 */
-/* header-box */
+/* ++++++++++++++++++++++++++++++++++section1++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++header-box++++++++++++++++++++++++++++++ */
 .header-box {
-  background-color: #2e2f42;
+/* Phone devices */
+background-color: #2e2f42;
+background-image: linear-gradient(
+  to bottom,
+  rgba(46, 47, 66, 0.7),
+  rgba(46, 47, 66, 0.7)
+  ),
+  url(../images/Dark-bg-Phone-1x.jpg);
+
+  max-width: 320px;
+  height: 432px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* max-width: 1440px; */
+  padding: 72px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  margin: auto;
+}
+ @media screen and (min-width: 768px) {
+  .header-box {
+    background-image: linear-gradient(
+  to bottom,
+  rgba(46, 47, 66, 0.7),
+  rgba(46, 47, 66, 0.7)
+  ), url(../images/Dark-bg-Tab-1x.jpg);
+  max-width: 768px;
+  height: 436px;
+  padding: 112px 0;
+  }
+ }
+/* Desktop devices */
+@media screen and (min-width: 1158px) {
+    .header-box {
+    background-image: linear-gradient(
+  to bottom,
+  rgba(46, 47, 66, 0.7),
+  rgba(46, 47, 66, 0.7)
+  ), url(../images/Dark-bg-Desktop-1x.jpg);
+  max-width: 1440px;
+  height: 600px;
+  padding: 188px 0;
+  }
+}
+.header-box {
+  /* background-color: #2e2f42;
   background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/people-office.jpg); */
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1440px;
-  padding: 188px 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin: auto;
+
 }
 .header-box-container {
 }
 .header-box-content {
-  color: #ffffff;
-  text-align: center;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
+color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 36px;
+font-weight: 700;
+line-height: 1.11;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+padding-bottom: 72px;
+}
+ @media screen and (min-width: 768px) {
+  .header-box-content {
+font-size: 56px;
+line-height: 1.07;
+letter-spacing: 0.02em;
+padding-bottom: 36px;
+ }
+}
+
+@media screen and (min-width: 1158px) {
+  .header-box-content {
   max-width: 496px;
+  padding-bottom: 48px;
   margin: auto;
+  }
 }
 .header-box-button {
   color: #ffffff;
@@ -309,7 +365,7 @@ span {
   border: none;
   border-radius: 4px;
   display: block;
-  margin: 48px auto 0;
+  margin:0 auto;
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
